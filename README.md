@@ -233,3 +233,12 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 
 - 메소드 또는 생성자의 매개변수로 람다의 입력값을 받는다.
 - 리턴값 또는 생성한 객체는 람다의 리턴값이다.
+
+````java
+UnaryOperator<String> hi = (s) -> "hi " + s;
+System.out.println(hi.apply("jun"));
+
+// 메서드 레퍼런스
+UnaryOperator<String> hi2 = Greeting::hi;
+System.out.println(hi2.apply("jun"));
+````
