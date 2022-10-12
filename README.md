@@ -28,10 +28,15 @@ public interface RunSomething {
 RunSomething rs = new RunSomething() {
 	@Override
 	public void doit() {
-		
+		System.out.println("Hello, World!");
 	}
 };
 ````
+- 람다식을 사용한 인터페이스 구현
+````java
+RunSomething rs = () -> System.out.println("Hello, World!");
+````
+
 ## 자바에서 함수형 프로그래밍 ##
 - 함수를 First class object로 사용할 수 있다.
 - 순수 함수 (Pure function)
