@@ -102,7 +102,8 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	}
 	````
 	````java
-	Function<Integer, Integer> plus8 = (i) -> i + 8; // 따로 class를 만들지 않아도 된다.
+	// 혹은 구현 class를 만들지 않고, 바로 사용가능하다.
+	Function<Integer, Integer> plus8 = (i) -> i + 8;
 	System.out.println(plus8.apply(1));
 	````
 	
