@@ -9,7 +9,7 @@ public interface RunSomething {
 	// abstract void doit2(); // 추상 메서드가 2개 이상이면 함수형 인터페이스가 아니다.
 }
 ````
--  @FunctionalInterface 애노테이션을 가지고 있는 인터페이스
+- 혹은 @FunctionalInterface 애노테이션을 가지고 있는 인터페이스
 ````java
 @FunctionalInterface // 함수형 인터페이스를 더 견고하게 만들기 위해서 사용한다.
 public interface RunSomething {
