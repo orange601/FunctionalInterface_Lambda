@@ -85,6 +85,26 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 		* andThen
 		* compose
 	````
+	````java
+	// 자바에서 기본으로 제공하는 함수형 인터페이스
+	public class Plus10 implements Function<Integer, Integer>{
+		@Override
+		public Integer apply(Integer t) {
+			return t + 10;
+		}
+	}
+	
+	public class Application {
+		public static void main(String[] args) {
+			Plus10 plus10 = new Plus10();
+			System.out.println(plus10.apply(1));
+		}
+	}
+	````
+	````java
+	Function<Integer, Integer> plus8 = (i) -> i + 8; // 따로 class를 만들지 않아도 된다.
+	System.out.println(plus8.apply(1));
+	````
 	
 	- ### BiFunction<T, U, R> ###
 	````
