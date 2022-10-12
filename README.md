@@ -146,6 +146,11 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 		* Or
 		* Negate
 	````
+	````java
+	// true or false 리턴
+	Predicate<String> startsWithJun = (s) -> s.startsWith("jun");
+	System.out.println(startsWithJun.test("junAndJhon"));
+	````
 	
 	- ### UnaryOperator<T> ###
 	````
