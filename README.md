@@ -2,7 +2,7 @@
 함수형 인터페이스와 람다 표현식
 
 ## 함수형 인터페이스 (Functional Interface) ##
-- 추상 메소드를 딱 하나만 가지고 있는 인터페이스
+- 추상 메소드를 딱 하나만 가지고 있는 인터페이스, SAM (Single Abstract Method) 인터페이스
 ````java
 public interface RunSomething {
 	abstract void doit(); // 추상 메서드가 하나인 함수형 인터페이스 // abstract 생략가능
@@ -17,7 +17,6 @@ public interface RunSomething {
 	// abstract void doit2(); 추상 메서드가 2개 이상이면 ERROR가 발생한다.
 }
 ````
-- SAM (Single Abstract Method) 인터페이스
 
 ## 람다 표현식 (Lambda Expressions) ##
 - 함수형 인터페이스의 인스턴스를 만드는 방법으로 쓰일 수 있다.
