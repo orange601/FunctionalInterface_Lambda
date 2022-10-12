@@ -112,6 +112,13 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	- 두 개의 값(T, U)를 받아서 R 타입을 리턴하는 함수 인터페이스
 		* R apply(T t, U u)
 	````
+	````java
+	// compose 
+	Function<Integer, Integer> plus8 = (i) -> i + 8;
+	Function<Integer, Integer> multiply2 = (i) -> i * 2;
+	// 곱하기 후 더하기
+	System.out.println(plus8.compose(multiply2).apply(2));	
+	````
 	
 	- ### Consumer<T> ###
 	````
