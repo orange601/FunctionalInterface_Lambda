@@ -135,6 +135,7 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	System.out.println(plus8.apply(1));
 	````
 	````java
+	// 추가 기능
 	Function<Integer, Integer> plus8 = (i) -> i + 8;
 	Function<Integer, Integer> multiply2 = (i) -> i * 2;
 	
