@@ -186,3 +186,9 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	````
 	- BiFunction<T, U, R>의 특수한 형태로, 동일한 타입의 입렵값 두개를 받아 리턴하는 함수 인터페이스
 	````
+	````java
+	// BiFunction에서 인자타입2개와 리턴타입 모두가 같을때 사용
+	BinaryOperator<Integer> binaryOperator = (n1, n2) -> n1 + n2;
+	Integer sum = binaryOperator.apply(10, 100);
+	System.out.println(sum);	
+	````
