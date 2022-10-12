@@ -106,12 +106,6 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	Function<Integer, Integer> plus8 = (i) -> i + 8;
 	System.out.println(plus8.apply(1));
 	````
-	
-	- ### BiFunction<T, U, R> ###
-	````
-	- 두 개의 값(T, U)를 받아서 R 타입을 리턴하는 함수 인터페이스
-		* R apply(T t, U u)
-	````
 	````java
 	Function<Integer, Integer> plus8 = (i) -> i + 8;
 	Function<Integer, Integer> multiply2 = (i) -> i * 2;
@@ -122,6 +116,19 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	// 더하기 후 곱하기 // andThen
 	System.out.println(plus8.andThen(multiply2).apply(2));
 	````
+	
+	
+	- ### BiFunction<T, U, R> ###
+	````
+	- 두 개의 값(T, U)를 받아서 R 타입을 리턴하는 함수 인터페이스
+		* R apply(T t, U u)
+	````
+	````java
+	// Function과 같지만 인자를 2개 받는다.
+	BiFunction<Integer, Integer, Integer> plusplus = (n, m) -> n + m;
+	System.out.println(plusplus.apply(1, 2));
+	````
+
 	
 	- ### Consumer<T> ###
 	````
