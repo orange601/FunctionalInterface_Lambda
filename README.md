@@ -77,6 +77,13 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 1. [함수형인터페이스 목록(JAVA DOCS)](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
 2. 자바에서 미리 정의해둔 자주 사용할만한 함수 인터페이스
 	- Function<T, R>
+	````
+	- T 타입을 받아서 R 타입을 리턴하는 함수 인터페이스
+		* R apply(T t)
+	- 함수 조합용 메소드
+		* andThen
+		* compose
+	````
 	- BiFunction<T, U, R>
 	- Consumer<T>
 	- Supplier<T>
