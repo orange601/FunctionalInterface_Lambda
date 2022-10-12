@@ -34,7 +34,7 @@ RunSomething rs = new RunSomething() {
 ````
 - 람다식을 사용한 인터페이스 구현
 ````java
-// 함수형 생략 // 중괄호 { 생
+// 함수명 생략 // 중괄호 { 생략
 RunSomething rs = () -> System.out.println("Hello, World!");
 ````
 
