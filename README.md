@@ -220,3 +220,8 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	Integer sum = binaryOperator.apply(10, 100);
 	System.out.println(sum);	
 	````
+
+## 메소드 레퍼런스 ##
+- 람다가 하는 일이 기존 메소드 또는 생성자를 호출하는 거라면, 메소드 레퍼런스를 사용해서 매우 간결하게 표현할 수 있다.
+
+메소드 참조하는 방법
