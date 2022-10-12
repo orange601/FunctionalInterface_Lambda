@@ -137,6 +137,12 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	- 함수 조합용 메소드
 		* andThen
 	````
+	````java
+	// void
+	Consumer<String> consumer = s -> System.out.println(s.toUpperCase());
+        consumer.accept("hello world");
+	````
+	
 	
 	- ### Supplier<T> ###
 	````
