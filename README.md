@@ -230,8 +230,8 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 ---- | ---- | 
 스태틱 메소드 참조 | 타입::스태틱 메소드 |
 특정 객체의 인스턴스 메소드 참조 | 객체 레퍼런스::인스턴스 메소드 |
-임의 객체의 인스턴스 메소드 참조 | 타입::인스턴스 메소드 |
 생성자 참조 | 타입::new |
+임의 객체의 인스턴스 메소드 참조 | 타입::인스턴스 메소드 |
 
 ### 1. 스태틱 메소드 참조 ###
 ````java
@@ -258,7 +258,7 @@ public class Greeting {
 }
 ````
 
-### 4. 생성자 참조 ###
+### 3. 생성자 참조 ###
 ````java
 // 인자가 없는 생성자 레퍼런스
 Supplier<Greeting> newgreeting = Greeting::new;
@@ -284,4 +284,22 @@ public class Greeting {
 	}
 
 }	
+````
+
+### 4. 임의 객체의 인스턴스 메소드 참조 ###
+````java
+// 임의 객체의 인스턴스 메소드 참조
+String[] names = {"test", "jun", "tom"};
+Arrays.sort(names, new Comparator<String>() {
+	@Override
+	public int compare(String o1, String o2) {
+		return 0;
+	}
+});
+// 이렇게 변경가능
+Arrays.sort(names, (String o1, String o2) -> 0);
+System.out.println(Arrays.toString(names)); // 정렬안됨
+// 혹은 
+Arrays.sort(names, String::compareToIgnoreCase);
+System.out.println(Arrays.toString(names)); // 정렬 됨
 ````
