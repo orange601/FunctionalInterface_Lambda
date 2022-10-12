@@ -41,8 +41,23 @@ RunSomething rs = () -> System.out.println("Hello, World!");
 ## 자바에서 함수형 프로그래밍 ##
 - 함수를 First class object로 사용할 수 있다.
 - 순수 함수 (Pure function)
+    + 같은 값을 넣으면 같은 값이 나와야 한다.
     + 사이드 이팩트가 없다. (함수 밖에 있는 값을 변경하지 않는다.)
     + 상태가 없다. (함수 밖에 있는 값을 사용하지 않는다.)
+````java
+RunSomething rs = new RunSomething() {
+	int num = 10;
+	@Override
+	public int doit(int number) {
+		num++;
+		return num + number;
+	}
+};
+
+System.out.println(rs.doit(10)); // 같은값을 넣으면 같은값이 나와야 하는데
+System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니다
+````
+
 - 고차 함수 (Higher-Order Function)
     + 함수가 함수를 매개변수로 받을 수 있고 함수를 리턴할 수도 있다.
 - 불변성
