@@ -140,7 +140,7 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	````java
 	// void
 	Consumer<String> consumer = s -> System.out.println(s.toUpperCase());
-        consumer.accept("hello world");
+	consumer.accept("hello world");
 	````
 	
 	
