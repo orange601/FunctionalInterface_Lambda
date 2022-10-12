@@ -22,7 +22,16 @@ public interface RunSomething {
 - 함수형 인터페이스의 인스턴스를 만드는 방법으로 쓰일 수 있다.
 - 코드를 줄일 수 있다.
 - 메소드 매개변수, 리턴 타입, 변수로 만들어 사용할 수도 있다.
-
+- 인터페이스 구현 ( 람다 X )
+````java
+// 익명 내부클래스
+RunSomething rs = new RunSomething() {
+	@Override
+	public void doit() {
+		
+	}
+};
+````
 ## 자바에서 함수형 프로그래밍 ##
 - 함수를 First class object로 사용할 수 있다.
 - 순수 함수 (Pure function)
