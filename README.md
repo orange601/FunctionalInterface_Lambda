@@ -37,6 +37,16 @@ RunSomething rs = new RunSomething() {
 // 함수명 생략 // 중괄호 { 생략
 RunSomething rs = () -> System.out.println("Hello, World!");
 ````
+````java
+RunSomething rs = new RunSomething() {
+	@Override
+	public int doit(int num) {
+		return num + 1;
+	}
+};
+// 파라미터가 있다면 이런식으로 줄일 수 있다.
+RunSomething rs2 = n -> n + 1;
+````
 
 ## 자바에서 함수형 프로그래밍 ##
 - 함수를 First class object로 사용할 수 있다.
