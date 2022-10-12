@@ -257,3 +257,31 @@ public class Greeting {
 	}
 }
 ````
+
+### 4. 생성자 참조 ###
+````java
+// 인자가 없는 생성자 레퍼런스
+Supplier<Greeting> newgreeting = Greeting::new;
+Greeting gre = newgreeting.get();
+
+// 인자를 받는 생성자 래퍼런스
+Function<String, Greeting> myGreeting = Greeting::new;
+Greeting gre2 = myGreeting.apply("me name");
+System.out.println(gre2.getName());
+
+public class Greeting {
+	private String name;
+	public Greeting() {
+		
+	}
+	
+	public Greeting(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+}	
+````
