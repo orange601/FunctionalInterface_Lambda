@@ -149,6 +149,11 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	- T 타입의 값을 제공하는 함수 인터페이스
 		* T get()
 	````
+	````java
+	// 인자를 받지않고, 리털할 타입만 결정한다.
+        Supplier<String> supplier= ()-> "HelloWorld";
+        System.out.println(supplier.get());
+	````
 	
 	- ### Predicate<T> ###
 	````
