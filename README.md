@@ -174,6 +174,13 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	````
 	- Function<T, R>의 특수한 형태로, 입력값 하나를 받아서 동일한 타입을 리턴하는 함수 인터페이스
 	````
+	````java
+	// Function에서 인자 타입과 리턴타입이 같을때 사용한다.
+	UnaryOperator<Integer> plus1 = (i) -> i + 1;
+	UnaryOperator<Integer> multiply4 = (i) -> i * 4;
+	System.out.println(plus1.apply(2));
+	System.out.println(multiply4.apply(2));
+	````
 	
 	- ### BinaryOperator<T> ###
 	````
