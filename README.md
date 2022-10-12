@@ -105,12 +105,13 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 - [함수형인터페이스 목록(JAVA DOCS)](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
 - 자바에서 미리 정의해둔 자주 사용할만한 함수 인터페이스
 	
-	### 1. Function<T, R> ###
+	1. ### Function<T, R> ###
 		+ T 타입을 받아서 R 타입을 리턴하는 함수 인터페이스
-			- R apply(T t)
+			* R apply(T t)
 		+ 함수 조합용 메소드
-			- andThen
-			- compose
+			* andThen
+			* compose
+	
 	````java
 	// 자바에서 기본으로 제공하는 함수형 인터페이스
 	public class Plus10 implements Function<Integer, Integer>{
@@ -127,6 +128,7 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 		}
 	}
 	````
+	
 	````java
 	// 혹은 구현 class를 만들지 않고, 바로 사용가능하다.
 	Function<Integer, Integer> plus8 = (i) -> i + 8;
@@ -144,11 +146,10 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	````
 	
 	
-	- ### BiFunction<T, U, R> ###
-	````
-	- 두 개의 값(T, U)를 받아서 R 타입을 리턴하는 함수 인터페이스
-		* R apply(T t, U u)
-	````
+	2. ### BiFunction<T, U, R> ###
+		- 두 개의 값(T, U)를 받아서 R 타입을 리턴하는 함수 인터페이스
+			* R apply(T t, U u)
+
 	````java
 	// Function과 같지만 인자를 2개 받는다.
 	BiFunction<Integer, Integer, Integer> plusplus = (n, m) -> n + m;
@@ -156,13 +157,12 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	````
 
 	
-	- ### Consumer<T> ###
-	````
-	- T 타입을 받아서 아무값도 리턴하지 않는 함수 인터페이스
-		* void Accept(T t)
-	- 함수 조합용 메소드
-		* andThen
-	````
+	3. ### Consumer<T> ###
+		- T 타입을 받아서 아무값도 리턴하지 않는 함수 인터페이스
+			* void Accept(T t)
+		- 함수 조합용 메소드
+			* andThen
+
 	````java
 	// void
 	Consumer<String> consumer = s -> System.out.println(s.toUpperCase());
@@ -170,36 +170,33 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	````
 	
 	
-	- ### Supplier<T> ###
-	````
-	- T 타입의 값을 제공하는 함수 인터페이스
-		* T get()
-	````
+	4. ### Supplier<T> ###
+		- T 타입의 값을 제공하는 함수 인터페이스
+			* T get()
+	
 	````java
 	// 인자를 받지않고, 리털할 타입만 결정한다.
         Supplier<String> supplier= ()-> "HelloWorld";
         System.out.println(supplier.get());
 	````
 	
-	- ### Predicate<T> ###
-	````
-	- T 타입을 받아서 boolean을 리턴하는 함수 인터페이스
-		* boolean test(T t)
-	- 함수 조합용 메소드
-		* And
-		* Or
-		* Negate
-	````
+	5. ### Predicate<T> ###
+		- T 타입을 받아서 boolean을 리턴하는 함수 인터페이스
+			* boolean test(T t)
+		- 함수 조합용 메소드
+			* And
+			* Or
+			* Negate
+
 	````java
 	// true or false 리턴
 	Predicate<String> startsWithJun = (s) -> s.startsWith("jun");
 	System.out.println(startsWithJun.test("junAndJhon"));
 	````
 	
-	- ### UnaryOperator<T> ###
-	````
-	- Function<T, R>의 특수한 형태로, 입력값 하나를 받아서 동일한 타입을 리턴하는 함수 인터페이스
-	````
+	6. ### UnaryOperator<T> ###
+		- Function<T, R>의 특수한 형태로, 입력값 하나를 받아서 동일한 타입을 리턴하는 함수 인터페이스
+
 	````java
 	// Function에서 인자 타입과 리턴타입이 같을때 사용한다.
 	UnaryOperator<Integer> plus1 = (i) -> i + 1;
@@ -208,10 +205,9 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	System.out.println(multiply4.apply(2));
 	````
 	
-	- ### BinaryOperator<T> ###
-	````
-	- BiFunction<T, U, R>의 특수한 형태로, 동일한 타입의 입렵값 두개를 받아 리턴하는 함수 인터페이스
-	````
+	7. ### BinaryOperator<T> ###
+		- BiFunction<T, U, R>의 특수한 형태로, 동일한 타입의 입렵값 두개를 받아 리턴하는 함수 인터페이스
+
 	````java
 	// BiFunction에서 인자타입2개와 리턴타입 모두가 같을때 사용
 	BinaryOperator<Integer> binaryOperator = (n1, n2) -> n1 + n2;
