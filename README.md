@@ -71,3 +71,15 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 - 고차 함수 (Higher-Order Function)
     + 함수가 함수를 매개변수로 받을 수 있고 함수를 리턴할 수도 있다.
 - 불변성
+
+
+## 자바에서 제공하는 함수형 인터페이스 ##
+1. [함수형인터페이스 목록](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
+2. 자바에서 미리 정의해둔 자주 사용할만한 함수 인터페이스
+	- Function<T, R>
+	- BiFunction<T, U, R>
+	- Consumer<T>
+	- Supplier<T>
+	- Predicate<T>
+	- UnaryOperator<T>
+	- BinaryOperator<T>
