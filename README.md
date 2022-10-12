@@ -241,4 +241,10 @@ System.out.println(hi.apply("jun"));
 // 메서드 레퍼런스
 UnaryOperator<String> hi2 = Greeting::hi;
 System.out.println(hi2.apply("jun"));
+	
+public class Greeting {
+	public static String hi(String name) {
+		return "hi " + name;
+	}
+}
 ````
