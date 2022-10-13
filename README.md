@@ -3,13 +3,16 @@
 
 ## 함수형 인터페이스 (Functional Interface) ##
 - 추상 메소드를 딱 하나만 가지고 있는 인터페이스, SAM (Single Abstract Method) 인터페이스
+
 ````java
 public interface RunSomething {
 	abstract void doit(); // 추상 메서드가 하나인 함수형 인터페이스 // abstract 생략가능
 	// abstract void doit2(); // 추상 메서드가 2개 이상이면 함수형 인터페이스가 아니다.
 }
 ````
+
 - 혹은 @FunctionalInterface 애노테이션을 가지고 있는 인터페이스
+
 ````java
 @FunctionalInterface // 함수형 인터페이스를 더 견고하게 만들기 위해서 사용한다.
 public interface RunSomething {
@@ -24,6 +27,7 @@ public interface RunSomething {
 - 코드를 줄일 수 있다.
 - 메소드 매개변수, 리턴 타입, 변수로 만들어 사용할 수도 있다.
 - 인터페이스 구현 ( 람다 X )
+
 ````java
 // 익명 내부클래스
 RunSomething rs = new RunSomething() {
@@ -33,11 +37,14 @@ RunSomething rs = new RunSomething() {
 	}
 };
 ````
+
 - 람다식을 사용한 인터페이스 구현
+
 ````java
 // 함수명 생략 // 중괄호 { 생략
 RunSomething rs = () -> System.out.println("Hello, World!");
 ````
+
 ````java
 RunSomething rs = new RunSomething() {
 	@Override
