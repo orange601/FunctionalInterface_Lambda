@@ -6,6 +6,21 @@
 - 클래스 정의와 동시에 객체를 생성한다.그러므로 일회용 클래스이다.
 - 사용이유는 프로그램 내에서 한번만 객체로 만드는데 사용되는 클래스의 경우 클래스를 정의하고 생성하는 것이 비효율적이기 때문이다.
 
+````java
+@FunctionalInterface
+public interface RunSomething {
+	abstract void doit();
+}
+
+RunSomething rs = new RunSomething() {
+	@Override
+	public void doit() {
+		System.out.println("Hello, World");
+	}
+}
+````
+
+
 ## 함수형 인터페이스 (Functional Interface) ##
 - 추상 메소드를 딱 하나만 가지고 있는 인터페이스, SAM (Single Abstract Method) 인터페이스
 
