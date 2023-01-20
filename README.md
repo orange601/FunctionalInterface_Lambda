@@ -12,11 +12,13 @@ public interface RunSomething {
 	abstract void doit();
 }
 
-RunSomething rs = new RunSomething() {
-	@Override
-	public void doit() {
-		System.out.println("Hello, World");
-	}
+public static void main(String[] args) {
+	RunSomething rs = new RunSomething() {
+		@Override
+		public void doit() {
+			System.out.println("Hello, World");
+		}
+	};
 }
 ````
 
