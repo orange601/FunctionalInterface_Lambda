@@ -4,12 +4,12 @@
 ## 목차 ##
 - [1. 익명 클래스 (Anonymous Class)](#1-익명-클래스)
 - [2. 함수형 인터페이스 (Functional Interface)](#2-함수형-인터페이스)
-- [람다 표현식 (Lambda Expressions)]
-[함수형 프로그래밍 (Functional Programming)]
-[함수형 인터페이스 (Functional Interface)]
-[메소드 레퍼런스 (Method Reference)]
+- [3. 람다 표현식 (Lambda Expressions)](#3-람다-표현식)
+- [4. 함수형 프로그래밍 (Functional Programming)](#4-함수형-프로그래밍)
+- [5. 함수형 인터페이스 (Functional Interface)](#5-함수형-인터페이스)
+- [6. 메소드 레퍼런스 (Method Reference)](#6-메소드-표현식)
 
-## 1. 익명 클래스 (Anonymous Class) ##
+## 1. 익명 클래스 ##
 - 이름이 없는 클래스
 - 클래스 정의와 동시에 객체를 생성한다.그러므로 일회용 클래스이다.
 - 사용이유는 프로그램 내에서 한번만 사용되는 클래스의 경우 클래스를 정의하고 생성하는 것이 비효율적이기 때문이다.
@@ -51,7 +51,7 @@ public interface RunSomething {
 }
 ````
 
-## 람다 표현식 (Lambda Expressions) ##
+## 3. 람다 표현식 ##
 
 - 함수형 인터페이스의 인스턴스를 만드는 방법으로 쓰일 수 있다.
 - 코드를 줄일 수 있다.
@@ -112,7 +112,7 @@ RunSomething rs2 = n -> n + 1;
 	- 익명 클래스 구현체와 달리 ‘쉐도윙’하지 않는다.
 		+ 익명 클래스는 새로 스콥을 만들지만, 람다는 람다를 감싸고 있는 스콥과 같다.
 
-## 자바에서 함수형 프로그래밍 ##
+## 4. 함수형 프로그래밍 ##
 
 - 함수를 First class object로 사용할 수 있다.
 - 순수 함수 (Pure function)
@@ -138,7 +138,7 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 - 불변성
 
 
-## 자바에서 제공하는 함수형 인터페이스 ##
+## 5. 함수형 인터페이스 ##
 - [함수형인터페이스 목록(JAVA DOCS)](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
 - 자바에서 미리 정의해둔 자주 사용할만한 함수 인터페이스
 - java 8의 Function은 1개의 인자(Type T)를 받고 1개의 객체(Type R)를 리턴하는 함수형 인터페이스
@@ -254,7 +254,7 @@ System.out.println(rs.doit(10)); // 값이 다르므로 순수 함수 가 아니
 	System.out.println(sum);	
 	````
 
-## 메소드 레퍼런스 ##
+## 6. 메소드 레퍼런스 ##
 - 람다가 하는 일이 기존 메소드 또는 생성자를 호출하는 거라면, 메소드 레퍼런스를 사용해서 매우 간결하게 표현할 수 있다.
 - 메소드 또는 생성자의 매개변수로 람다의 입력값을 받는다.
 - 리턴값 또는 생성한 객체는 람다의 리턴값이다.
