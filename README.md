@@ -3,7 +3,7 @@
 
 ## 목차 ##
 - [1. 익명 클래스 (Anonymous Class)](#1-익명-클래스-(Anonymous-Class))
-- [2. 함수형 인터페이스 (Functional Interface)](#2-함수형-인터페이스-(Functional Interface))
+- [2. 함수형 인터페이스 (Functional Interface)](#2-함수형-인터페이스)
 - [람다 표현식 (Lambda Expressions)]
 [함수형 프로그래밍 (Functional Programming)]
 [함수형 인터페이스 (Functional Interface)]
