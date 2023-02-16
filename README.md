@@ -2,14 +2,14 @@
 함수형 인터페이스와 람다 표현식 [인프런-백기선-java8](https://www.inflearn.com/course/the-java-java8)
 
 ## 목차 ##
-[익명 클래스 (Anonymous Class)](#함수형-인터페이스-(Functional-Interface))
-[함수형 인터페이스 (Functional Interface)]
+[1. 익명 클래스 (Anonymous Class)](#1.-익명-클래스-(Anonymous-Class))
+[2. 함수형 인터페이스 (Functional Interface)](#2.-함수형-인터페이스-(Functional-Interface))
 [람다 표현식 (Lambda Expressions)]
 [함수형 프로그래밍 (Functional Programming)]
 [함수형 인터페이스 (Functional Interface)]
 [메소드 레퍼런스 (Method Reference)]
 
-## 익명 클래스 ##
+## 1. 익명 클래스 (Anonymous Class) ##
 - 이름이 없는 클래스
 - 클래스 정의와 동시에 객체를 생성한다.그러므로 일회용 클래스이다.
 - 사용이유는 프로그램 내에서 한번만 사용되는 클래스의 경우 클래스를 정의하고 생성하는 것이 비효율적이기 때문이다.
@@ -31,7 +31,7 @@ public static void main(String[] args) {
 ````
 
 
-## 함수형 인터페이스 (Functional Interface) ##
+## 2. 함수형 인터페이스 (Functional Interface) ##
 - 추상 메소드를 딱 하나만 가지고 있는 인터페이스, SAM (Single Abstract Method) 인터페이스
 
 ````java
