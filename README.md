@@ -7,7 +7,7 @@
 - [3. 람다 표현식 (Lambda Expressions)](#3-람다-표현식)
 - [4. 함수형 프로그래밍 (Functional Programming)](#4-함수형-프로그래밍)
 - [5. 함수형 인터페이스 (Functional Interface)](#5-함수형-인터페이스)
-- [6. 메소드 레퍼런스 (Method Reference)](#6-메소드-표현식)
+- [6. 메소드 레퍼런스 (Method Reference)](#6-메소드-레퍼런스)
 
 ## 1. 익명 클래스 ##
 - 이름이 없는 클래스
